@@ -1,3 +1,12 @@
+#While running it in Ubuntu
+mysql -u awkologist -p compbiol -e '
+SELECT m.MemberID, m.LastName, m.FirstName 
+FROM Member m
+WHERE m.MemberID  IN 
+(SELECT e.MemberID from Entry e Group By e.MemberID Having COUNT(DISTINCT Year) = (SELECT COUNT(DISTINCT Year) from Entry))
+;'
+
+#While running it in mysql
 SELECT m.MemberID, m.LastName, m.FirstName 
 FROM Member m
 WHERE m.MemberID  IN 
