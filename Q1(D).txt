@@ -1,3 +1,4 @@
+#While doing it in ubuntu directly
 mysql -u awkologist -p compbiol -e '
 SELECT DISTINCT a1.gene, a1.metabolism
 FROM annotation a1, annotation a2
@@ -5,3 +6,8 @@ WHERE a1.metabolism=a2.metabolism and
 a1.gene<>a2.gene
 ;'
 
+#Doing it in mysql
+SELECT DISTINCT a1.gene, a1.metabolism
+FROM annotation a1, annotation a2
+WHERE a1.metabolism=a2.metabolism and
+a1.gene<>a2.gene;
