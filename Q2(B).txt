@@ -1,3 +1,11 @@
+#While running it in Ubuntu
+mysql -u awkologist -p compbiol -e '
+SELECT m.LastName, m.FirstName
+FROM Member m
+WHERE Year(m.JoinDate) = 2010
+;'
+
+#While running it in mysql
 SELECT m.LastName, m.FirstName
 FROM Member m
 WHERE Year(m.JoinDate) = 2010;
