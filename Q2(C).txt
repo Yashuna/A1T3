@@ -1,10 +1,10 @@
 #While running it in Ubuntu
-mysql -u awkologist -p compbiol -e '
-SELECT DISTINCT m.MemberID, m.LastName, m.FirstName
-FROM Member m
-INNER JOIN Entry e
-ON m.MemberID = e.MemberID 
-WHERE e.Year <> 2014
+mysql -u awkologist -p compbiol -e ' \
+SELECT DISTINCT m.MemberID, m.LastName, m.FirstName \
+FROM Member m \
+INNER JOIN Entry e \
+ON m.MemberID = e.MemberID \
+WHERE e.Year <> 2014 \
 ;'
 
 #While running it in mysql
