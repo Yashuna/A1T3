@@ -1,0 +1,3 @@
+SELECT m.LastName, m.FirstName 
+FROM Member m
+WHERE m.Coach is NULL;
