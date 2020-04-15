@@ -1,0 +1,6 @@
+mysql -u awkologist -p compbiol -e ' \
+select annotation.gene, annotation.function, expression.expr_value \
+from annotation \
+join expression on annotation.gene=expression.gene \
+;'
+
