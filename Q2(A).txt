@@ -1,8 +1,8 @@
 #While running in Ubuntu directly
-mysql -u awkologist -p compbiol -e '
-SELECT m.LastName, m.FirstName 
-FROM Member m
-WHERE m.Coach is NULL
+mysql -u awkologist -p compbiol -e ' \
+SELECT m.LastName, m.FirstName \
+FROM Member m \
+WHERE m.Coach is NULL \
 ;'
 
 #While running inside mysql
