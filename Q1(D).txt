@@ -1,3 +1,4 @@
+mysql -u awkologist -p compbiol -e '
 SELECT DISTINCT a1.gene, a1.metabolism
 FROM annotation a1, annotation a2
 WHERE a1.metabolism=a2.metabolism and
